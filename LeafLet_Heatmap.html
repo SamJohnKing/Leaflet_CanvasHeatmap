@@ -17,7 +17,8 @@
     </head>
 
     <body onload="init();">
-        <div id="map" style="width:960px; height:700px"></div>
+
+    <div id="map" style="width:960px; height:700px"></div>
     </body>
 
         <script type="text/javascript">
@@ -32,13 +33,6 @@
                 map.setView(new L.LatLng(40, 117), 3);                
                 var heatmap = new
                 L.TileLayer.HeatCanvas({},{'step':8, 'degree':HeatCanvas.QUAD, 'opacity':0.8});
-                heatmap.onRenderingStart(function(){
-                    document.getElementById("status").innerHTML =
-                'rendering';  
-                });
-                heatmap.onRenderingEnd(function(){
-                    document.getElementById("status").innerHTML = '';  
-                });
                 var data = [
 [39.9025,116.4065,71105],
 [31.2325,121.4745,40923],
